@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Not this time</title>
+		<style>
+			#fbi{
+				position:absolute;
+				width:100%;
+				left: 0%;
+				top: 0%;
+				z-index: 10;
+			}
+			#audio{
+				width:0%;
+				overflow:hidden;
+			}
+			#tekst{
+				position:fixed;
+				bottom:0%;
+				color:red;
+				font-size:60px;
+				border:5px solid red;
+				width:100%;
+				text-align:center;
+				z-index:11;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="audio"><audio autoplay>
+			<source src="dance.mp3" type="audio/mp3">
+			Wystąpił problem z nagranem!
+		</audio></div>
+		<img id="fbi" src="fbi.jpg">
+		<h1 id="tekst">Not this time my friend!</h1>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Zaległy Prima Aprilis</title>
+		<style>
+			body{
+				background-color:rgb(23,191,200);
+			}
+			#audio{
+				width:0px;
+				overflow:hidden;
+			}
+			#zdj{
+				position:absolute;
+				width:100%;
+				top:0px;
+				left:0px;
+				z-index:1;
+			}
+			#stonk{
+				position:absolute;
+				left:0px;
+				top:0px;
+				z-index:10;
+			}
+			#zakaz{
+				position:absolute;
+				width:474px;
+				height:284px;
+				right:0px;
+				bottom:0px;
+				z-index: 10;
+			}
+			#szkoly{
+				position:absolute;
+				width:474px;
+				height:284px;
+				left:0px;
+				bottom:0px;
+				z-index: 10;
+			}
+			#notka{
+				position:absolute;
+				right:0px;
+				top:0px;
+				font-size:50px;
+				color:red;
+				border: 5px ridge red;
+				z-index:10;
+			}
+		</style>
+	</html>
+	<body>
+		<div id="audio">
+		<audio autoplay>
+			<source src="audio.mp3" type="audio/mp3">
+			Wystąpił problem - skontaktuj się z adminem
+		</audio>
+		</div>
+		<img id="zdj" src="mem.jpg">
+		<img id="stonk" src="stonk.jpg">
+		<img id="zakaz" src="zakaz.png">
+		<img id="szkoly" src="szkoly.jpg">
+		<h2 id="notka">Hah zaległy Prima Aprilis :)</h2>
+	</body>
+</html>
