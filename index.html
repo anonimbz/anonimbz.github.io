@@ -1,52 +1,101 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="pl">
 	<head>
-		<title>Happy Easter</title>
 		<meta charset="utf-8">
+		<meta name="keywords" content="kotki, pieski, króliczki, ptaszki">
+		<meta name="description" content="strona ze zdjęciami">
+		<title>Strona ze zdjęciami zwierząt</title>
+		<script type="text/javascript">
+		function czas()
+		{
+		var dzisiaj = new Date();
+				
+		var dzien = dzisiaj.getDate();
+		var miesiac = dzisiaj.getMonth()+1;
+		var rok = dzisiaj.getFullYear();
+				
+		var godzina = dzisiaj.getHours();
+		if (godzina<10) godzina = "0"+godzina;
+				
+		var minuta = dzisiaj.getMinutes();
+		if (minuta<10) minuta = "0"+minuta;
+				
+		var sekunda = dzisiaj.getSeconds();
+		if (sekunda<10) sekunda = "0"+sekunda;
+				
+		document.getElementById("zegar").innerHTML = godzina+":"+minuta+":"+sekunda;
+		setTimeout("czas()", 1000);
+		
+		}
+		</script>
 		<style>
-			body{
+			#zegar{
+				font-size:50px;
+				border: 7px solid purple;
+				text-align:center;
+				margin-left:35%;
+				margin-right:35%;
+			}
+			#spis{
+				width:200px;
+				height:100%;
 				background-color:blue;
+				font-size:35px;
+				font-style:italic;
+				color:white;
+				border:5px solid black;
+				position:fixed;
+				right:0px;
+				top:0px;
+				text-align:center;
+				text-decoration:none;
+				z-index:10;
+			}
+			.link{
+				color:white;
+				z-index:11;
+			}
+			#tytspis{
+				text-decoration:underline;
+				z-index:10;
+			}
+			#baner{
+				position:fixed;
+				left:0px;
+				top:0px;
+				z-index:9;
 			}
 			#gif{
 				position:fixed;
-				width:100%;
-				z-index:1;
-				right:0px;
-				top:0px;
+				width:210px;
+				z-index:10;
+				left:0px;
+				bottom:0px;
+				z-index:11;
 			}
-			#happy{
-				position:absolute;
+			#glowny_naglowek{
+				font-size:50px;
 				text-align:center;
-				color:yellow;
-				font-size: 70px;
-				z-index: 10;
-				text-decoration: underline;
-				left:10px;
-			}
-			#list{
-				position:absolute;
-				z-index: 10;
-				top:20%;
-				left:2%;
-			}
-			.link1{
-				font-size:55px;
-				color:orange;
-				text-decoration:none;
-			}
+				text-width:bold;
+				color:red;
+				z-index:10;
+			}-->
 		</style>
 	</head>
-	<body>
-		<img id="gif" src="givwn.gif">
-		<h1 id="happy"><em>Happy Easter Egg! Życzonka: </em></h1>
-		<div id="list">
-		<ul class="link1">
-			<li><a href="zycz1.html" target=_blank>Click here!</a></li>
-			<li><a href="szczescia.html" target=_blank>Sposób na lepsze pieniążki i ocenki<a></li>
-			<li><a href="zycz2.html" target=_blank>Tylko dla Kuby i Sromotnika :)</a></li>
-			<li><a href="info.html" target=_blank>Ważne informacje!</a></li>
-		</ul>
+	<body onload="czas();">
+		<div id="zegar"></div>
+		<div id="spis">
+			<h3 id="tytspis">Spis zawartości</h3>
+			<ul>
+			<li><a class="link" href="koty.html" target=_blank><em>Koty</em></a></li>
+			<li><a class="link" href="psy.html" target=_blank><em>Psy</em></a></li>
+			<li><a class="link" href="kroliki.html" target=_blank><em>Króliki<em></a></li>
+			<li><a class="link" href="ptaki.html" target=_blank><em>Ptaki<em></a></li>
+			</ul>
 		</div>
+		<img id="baner" src="baner.png"><img id="gif" src="gif2.gif">
 		
+		<h1 id="glowny_naglowek">Strona w budowie!!!</h1>
+			
 	</body>
 </html>
